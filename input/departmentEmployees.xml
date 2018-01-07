@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<departments>
+<department>
+  <departmentName>R&amp;D</departmentName>
+  <person>
+    <name>John Schmidt</name>
+    <address>Red street 3</address>
+    <status>A</status>
+  </person>
+  <person>
+    <name>Paul   Bones</name>
+    <address>White street 5</address>
+    <status>A</status>
+  </person>
+  <person>
+    <name>Mark Mayer</name>
+    <address>Blue street 5</address>
+    <status>A</status>
+  </person>
+  <person>
+    <name>Janet Black</name>
+    <address>Black street 8</address>
+    <status>I</status>
+  </person>
+</department>
+<department>
+  <departmentName>Sales</departmentName>
+  <person>
+    <name>Juan Gómez</name>
+    <address>Green street 3</address>
+    <status>A</status>
+  </person>
+  <person>
+    <name>Juliet Bones</name>
+    <address>White street 5</address>
+    <status>A</status>
+  </person>
+
+</department>
+</departments>

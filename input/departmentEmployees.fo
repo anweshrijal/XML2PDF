@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?><xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:j4lext="xalan://com.java4less.xreport.fop.XLSTExtension" extension-element-prefixes="j4lext"  >
+<!--
+XSL-FO file created with J4L FO Designer
+-->
+<xsl:template match="/"><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master master-name="master1" page-width="21.0cm" page-height="29.7cm" margin-top="2.0cm"   margin-bottom="2.0cm" margin-left="2.0cm"  margin-right="2.0cm"> 
+  <fo:region-body   margin-top="0.54cm"/> 
+  <fo:region-before extent="0.54cm"/> 
+  <fo:region-after  extent="1.5cm"/> 
+  </fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="master1">
+<fo:static-content flow-name="xsl-region-before">
+<fo:table width="17.0cm"  >
+  <fo:table-column column-width="17.0cm"/>
+  <fo:table-body>
+    <fo:table-row   background-color="#ffffff" height="0.54cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="17.0cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.54cm">
+        <fo:table-cell   number-columns-spanned="1">
+        <fo:block></fo:block>        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+  </fo:table-body>
+</fo:table>
+</fo:static-content>
+<fo:static-content flow-name="xsl-region-after">
+<fo:table width="17.0cm"  >
+  <fo:table-column column-width="17.0cm"/>
+  <fo:table-body>
+    <fo:table-row   background-color="#ffffff" height="1.5cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="17.0cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="1.5cm">
+        <fo:table-cell   number-columns-spanned="1">
+        <fo:block></fo:block>        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+  </fo:table-body>
+</fo:table>
+</fo:static-content>
+<fo:flow flow-name="xsl-region-body"> 
+
+<!-- START Area Header -->
+<xsl:if test="count(departments/department) &gt; 0" >
+  <xsl:for-each select="departments/department">
+<fo:block break-before="page"></fo:block>
+<fo:table width="17.0cm"  >
+  <fo:table-column column-width="17.0cm"/>
+  <fo:table-body>
+    <fo:table-row   background-color="#ffffff" height="0.49cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="17.0cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.49cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="9.49cm"  margin-top="0.0cm"  font-size="18pt"  font-family="SansSerif"  color="#ff0000"  text-align="left">List of employees</fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+    <fo:table-row   background-color="#ffffff" height="1.0cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="2.49cm"/>
+      <fo:table-column column-width="14.51cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="1.0cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="0.0cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left">Department:</fo:block>
+        </fo:table-cell>
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="9.46cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left"><xsl:value-of select="departmentName"></xsl:value-of></fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+    <fo:table-row   background-color="#ffffff" height="0.01cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="17.0cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.01cm">
+        <fo:table-cell   number-columns-spanned="1">
+        <fo:block></fo:block>        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+<fo:table-row>
+<fo:table-cell number-columns-spanned="1">
+<fo:block>
+
+<!-- START Area Detail -->
+<xsl:if test="count(person) &gt; 0" >
+<fo:table width="17.0cm"  >
+  <fo:table-column column-width="17.0cm"/>
+  <fo:table-body>
+  <xsl:for-each select="person">
+    <fo:table-row   background-color="#ffffff" height="0.49cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="17.0cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.49cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block margin-left="0.0cm" margin-right="1.92cm"  margin-top="0.0cm" ><fo:leader leader-pattern="rule"  color="#000000"  rule-thickness="1.0pt"  rule-style="solid"  leader-length="100%"/></fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+    <fo:table-row   background-color="#ffffff" height="0.51cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="2.49cm"/>
+      <fo:table-column column-width="14.51cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.51cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="0.03cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  font-style="bold"  color="#000000"  text-align="left">Name:</fo:block>
+        </fo:table-cell>
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="1.97cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left"><xsl:value-of select="name"></xsl:value-of></fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+    <fo:table-row   background-color="#ffffff" height="0.49cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="2.49cm"/>
+      <fo:table-column column-width="14.51cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.49cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="0.05cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left">Address:</fo:block>
+        </fo:table-cell>
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="1.97cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left"><xsl:value-of select="address"></xsl:value-of></fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+    <fo:table-row   background-color="#ffffff" height="0.41cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="2.49cm"/>
+      <fo:table-column column-width="14.51cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.41cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="0.03cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left">Status:</fo:block>
+        </fo:table-cell>
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block    margin-left="0.0cm" margin-right="1.97cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left">        <xsl:variable name="Status" select="status"/>        <xsl:choose>
+            <xsl:when test="$Status = 'A'">Active</xsl:when>
+            <xsl:when test="$Status = 'I'">Inactive</xsl:when>
+           <xsl:otherwise><xsl:value-of select="status"></xsl:value-of>           </xsl:otherwise>
+        </xsl:choose>
+</fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+  </xsl:for-each>
+  </fo:table-body>
+</fo:table>
+</xsl:if>
+
+<!-- END Area Detail -->
+</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell number-columns-spanned="1">
+<fo:block>
+
+<!-- START Area Footer -->
+<fo:table width="17.0cm"  >
+  <fo:table-column column-width="17.0cm"/>
+  <fo:table-body>
+    <fo:table-row   background-color="#ffffff" height="0.49cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="17.0cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="0.49cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block margin-left="0.1cm" margin-right="1.82cm"  margin-top="0.1cm" ><fo:leader leader-pattern="rule"  color="#000000"  rule-thickness="1.0pt"  rule-style="solid"  leader-length="100%"/></fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+    <fo:table-row   background-color="#ffffff" height="1.01cm">
+      <fo:table-cell><fo:table>
+      <fo:table-column column-width="4.0cm"/>
+      <fo:table-column column-width="13.0cm"/>
+      <fo:table-body>
+      <fo:table-row  background-color="#ffffff" height="1.01cm">
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="0.0cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  font-style="bold"  color="#000000"  text-align="left">Number of employees:</fo:block>
+        </fo:table-cell>
+        <fo:table-cell   number-columns-spanned="1">
+      <fo:block   margin-left="0.0cm" margin-right="9.46cm"  margin-top="0.0cm"  font-size="10pt"  font-family="SansSerif"  color="#000000"  text-align="left"><xsl:value-of select="count(person)"></xsl:value-of></fo:block>
+        </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+    </fo:table></fo:table-cell>
+    </fo:table-row>
+  </fo:table-body>
+</fo:table>
+
+<!-- END Area Footer -->
+</fo:block>
+</fo:table-cell>
+</fo:table-row>
+  </fo:table-body>
+</fo:table>
+  </xsl:for-each>
+</xsl:if>
+
+<!-- END Area Header -->
+</fo:flow>
+</fo:page-sequence>
+</fo:root>
+</xsl:template>
+</xsl:transform>

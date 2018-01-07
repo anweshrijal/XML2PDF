@@ -1,0 +1,24 @@
+<mule xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/3.2/mule.xsd
+http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/3.2/mule-vm.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/3.2/mule-file.xsd">
+<file:connector name="input" autoDelete="false" doc:name="File" streaming="true" validateConnections="true"/>
+<file:connector name="output" doc:name="File"/>
+<custom-transformer name="XMLToPDF" class="com.java4less.mule.FOPTransformer" doc:name="Java">
+        <spring:property name="templateFile" value="/Users/anweshrijal/temp/pdf/departmentEmployees.fo"/>
+<!--
+ 
+ <spring:property name="P12File" value="c:/tmp/Jon.p12"/>
+<spring:property name="P12Psw" value="test"/>
+<spring:property name="Signature" value="true"/>
+ 
+-->
+</custom-transformer>
+<flow name="copyFile">
+	<file:inbound-endpoint connector-ref="input" path="/Users/anweshrijal/temp/pdf" doc:name="File" responseTimeout="10000" pollingFrequency="10000">
+            <file:filename-regex-filter pattern=".*xml" caseSensitive="true"/>
+        </file:inbound-endpoint>
+	<transformer ref="XMLToPDF" doc:name="Transformer Reference"/>
+	<file:outbound-endpoint connector-ref="output" path="/Users/anweshrijal/temp/pdf" outputPattern="output.pdf" doc:name="File" responseTimeout="10000"/>
+</flow>
+</mule>
