@@ -5,7 +5,7 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
 <file:connector name="input" autoDelete="false" doc:name="File" streaming="true" validateConnections="true"/>
 <file:connector name="output" doc:name="File"/>
 <custom-transformer name="XMLToPDF" class="com.java4less.mule.FOPTransformer" doc:name="Java">
-        <spring:property name="templateFile" value="/Users/anweshrijal/temp/pdf/departmentEmployees.fo"/>
+        <spring:property name="templateFile" value="input/departmentEmployees.fo"/>
 <!--
  
  <spring:property name="P12File" value="c:/tmp/Jon.p12"/>
@@ -15,10 +15,10 @@ http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/fil
 -->
 </custom-transformer>
 <flow name="copyFile">
-	<file:inbound-endpoint connector-ref="input" path="/Users/anweshrijal/temp/pdf" doc:name="File" responseTimeout="10000" pollingFrequency="10000">
+	<file:inbound-endpoint connector-ref="input" path="input" doc:name="File" responseTimeout="10000" pollingFrequency="10000">
             <file:filename-regex-filter pattern=".*xml" caseSensitive="true"/>
         </file:inbound-endpoint>
 	<transformer ref="XMLToPDF" doc:name="Transformer Reference"/>
-	<file:outbound-endpoint connector-ref="output" path="/Users/anweshrijal/temp/pdf" outputPattern="output.pdf" doc:name="File" responseTimeout="10000"/>
+	<file:outbound-endpoint connector-ref="output" path="output" outputPattern="output.pdf" doc:name="File" responseTimeout="10000"/>
 </flow>
 </mule>
